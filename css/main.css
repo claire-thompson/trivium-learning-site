@@ -98,6 +98,72 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   /**************************  BASE STYLES  *****************************/
+
+   body {
+     font-size: 16px;
+     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+     text-align: center;
+     color: #6E6E6E;
+   }
+
+   section {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .content-wrapper {
+     width: 90%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+   }
+
+   h1 {
+     font-size: 2.25em;
+     font-family: 'Libre Caslon Text', Georgia, 'Times New Roman', Times, serif;
+     text-transform: uppercase;
+     color: #00331F;
+   }
+
+   h2 {
+     text-transform: uppercase;
+     color: #00639E;
+   }
+
+   /* Hero Area */
+
+   .hero-area {
+     background-image: url('../img/hero.png');
+     background-size: cover;
+     background-position: center;
+   }
+
+   .hero-area p {
+     color: #FFFFFF;
+     font-weight: bold;
+   }
+
+   /* Sign Up Form */
+
+   .sign-up h3 {
+     color: #00639E;
+     text-transform: uppercase;
+   }
+
+   .sign-up input {
+     border: 1px solid #6E6E6E;
+   }
+
+   .sign-up button {
+     background: #00331F;
+     color: #FFFFFF;
+     text-transform: uppercase;
+     border: none;
+   }
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
