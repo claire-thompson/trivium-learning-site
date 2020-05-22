@@ -120,17 +120,28 @@ textarea {
      align-items: center;
    }
 
-   h1 {
-     font-size: 2.25em;
-     font-family: 'Libre Caslon Text', Georgia, 'Times New Roman', Times, serif;
-     text-transform: uppercase;
-     color: #00331F;
+   /* Headline */
+
+   .headline {
+     margin: 40px 0;
    }
 
-   h2 {
-     text-transform: uppercase;
-     color: #00639E;
-   }
+   h1 {
+    font-size: 2.25em;
+    font-family: 'Libre Caslon Text', Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: #00331F;
+    font-weight: 400;
+    margin: 30px 0 0 0;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    color: #00639E;
+    letter-spacing: 10px;
+    font-weight: lighter;
+    margin: 5px 0;
+  }
 
    /* Hero Area */
 
@@ -138,22 +149,47 @@ textarea {
      background-image: url('../img/hero.png');
      background-size: cover;
      background-position: center;
+     display: flex;
+     flex: column;
    }
 
    .hero-area p {
      color: #FFFFFF;
      font-weight: bold;
+     margin: 0;
+   }
+
+   #top {
+     margin: 20px 0 300px 0;
+     width: 70%;
+     align-self: flex-start;
+   }
+
+   #bottom {
+     width: 80%;
+     margin: 0 0 20px 0;
    }
 
    /* Sign Up Form */
 
+   .sign-up {
+     margin: 45px 0;
+   }
+
    .sign-up h3 {
      color: #00639E;
      text-transform: uppercase;
+     font-weight: lighter;
+     margin: 0;
    }
 
    .sign-up input {
      border: 1px solid #6E6E6E;
+     text-align: center;
+     font-style: italic;
+     margin: 30px 0;
+     height: 40px;
+     width: 80%;
    }
 
    .sign-up button {
@@ -161,6 +197,21 @@ textarea {
      color: #FFFFFF;
      text-transform: uppercase;
      border: none;
+     height: 40px;
+     width: 80%;
+   }
+
+   /* Footer */
+
+   footer {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+
+   footer p {
+     font-size: 0.75em;
+     margin: 0;
    }
 
 
