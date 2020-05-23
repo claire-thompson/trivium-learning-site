@@ -37,7 +37,8 @@
   <section class="sign-up">
     <h3>Be the first to know</h3>
     <form name="submit-to-google-sheet">
-      <input name ="email" type="email" placeholder="email address">
+      <p id="successMessage">Thanks! You'll hear from us soon.</p>
+      <input name ="email" type="email" placeholder="email address" required>
       <button type="submit" class="button">Join our mailing list</button>
     </form>
   </section>
@@ -49,15 +50,14 @@
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycby-Tl4WwR6g7gCs1YR3PsGXiSijSzHE-nmTRsjaY1jK9RIeQvft/exec'
     const form = document.forms['submit-to-google-sheet']
-  
+    const emailField = document.getElementsByName('email')
+
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
+      form.reset();
     })
   </script>
-
 
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

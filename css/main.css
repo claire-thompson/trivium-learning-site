@@ -198,6 +198,10 @@ textarea {
      margin: 0;
    }
 
+   #successMessage {
+     display: none;
+   }
+
    /* Footer */
 
    footer {
@@ -219,6 +223,12 @@ textarea {
    input:focus::placeholder {
      color: transparent;
    }
+
+   .button:hover {
+     background: #FFFFFF;
+     color: #00331F;
+     border: 1px solid #00331F;
+    }
 
 
 /* ==========================================================================
