@@ -138,8 +138,6 @@ textarea {
     margin: 0;
   }
 
-  
-
    /* Hero Area */
 
    .hero-area {
@@ -188,14 +186,16 @@ textarea {
      padding: 0;
    }
 
-   .sign-up button {
+   .sign-up .button {
      background: #00331F;
      color: #FFFFFF;
      text-transform: uppercase;
+     font-style: normal;
      border: none;
      height: 40px;
      width: 82%;
      padding: 0;
+     margin: 0;
    }
 
    /* Footer */
@@ -207,6 +207,17 @@ textarea {
    footer p {
      font-size: 0.75em;
      margin: 10px 0;
+   }
+
+
+   /******************** Active States *********************/
+
+   input:hover {
+     border: 2px solid #00331F;
+   }
+
+   input:focus::placeholder {
+     color: transparent;
    }
 
 
@@ -337,7 +348,7 @@ br {
   width: 50%;
 }
 
-.sign-up button {
+.sign-up .button {
   width: 51%;
 }
 
@@ -368,7 +379,7 @@ body {
   width: 65%;
 }
 
-.sign-up button {
+.sign-up .button {
   width: 66%;
 }
 
