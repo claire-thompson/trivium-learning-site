@@ -101,30 +101,33 @@ textarea {
    /**************************  BASE STYLES  *****************************/
 
    body {
+     min-height: 100vh;
      font-size: 16px;
      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
      text-align: center;
      color: #6E6E6E;
-   }
-
-   section {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-   }
-
-   .content-wrapper {
-     width: 90%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+     display: grid;
+    grid-template: auto 45vh auto auto / 100vw;
+    grid-template-areas: "head"
+                          "hero"
+                         "form"
+                         "foot";
    }
 
    /* Headline */
 
    .headline {
-     margin: 40px 0;
+     grid-area: head;
+     margin: 45px 0;
    }
+
+  h2 {
+      text-transform: uppercase;
+      color: #00639E;
+      letter-spacing: 10px;
+      font-weight: lighter;
+      margin: 0 0 35px 0;
+    }
 
    h1 {
     font-size: 2.25em;
@@ -132,16 +135,10 @@ textarea {
     text-transform: uppercase;
     color: #00331F;
     font-weight: 400;
-    margin: 30px 0 0 0;
+    margin: 0;
   }
 
-  h2 {
-    text-transform: uppercase;
-    color: #00639E;
-    letter-spacing: 10px;
-    font-weight: lighter;
-    margin: 5px 0;
-  }
+  
 
    /* Hero Area */
 
@@ -149,8 +146,11 @@ textarea {
      background-image: url('../img/hero.png');
      background-size: cover;
      background-position: center;
+     grid-area: hero;
      display: flex;
-     flex: column;
+     flex-direction: column;
+     justify-content: space-between;
+     padding: 10px 20px;
    }
 
    .hero-area p {
@@ -160,36 +160,32 @@ textarea {
    }
 
    #top {
-     margin: 20px 0 300px 0;
-     width: 70%;
-     align-self: flex-start;
-   }
-
-   #bottom {
-     width: 80%;
-     margin: 0 0 20px 0;
+    width: 70%;
+    align-self: flex-start;
    }
 
    /* Sign Up Form */
 
    .sign-up {
-     margin: 45px 0;
+     grid-area: form;
+     margin: 55px 0;
    }
 
    .sign-up h3 {
      color: #00639E;
      text-transform: uppercase;
      font-weight: lighter;
-     margin: 0;
+     margin: 0 0 5px 0;
    }
 
    .sign-up input {
      border: 1px solid #6E6E6E;
      text-align: center;
      font-style: italic;
-     margin: 30px 0;
      height: 40px;
      width: 80%;
+     margin: 30px 0;
+     padding: 0;
    }
 
    .sign-up button {
@@ -198,20 +194,19 @@ textarea {
      text-transform: uppercase;
      border: none;
      height: 40px;
-     width: 80%;
+     width: 82%;
+     padding: 0;
    }
 
    /* Footer */
 
    footer {
-     display: flex;
-     justify-content: center;
-     align-items: center;
+     grid-area: foot;
    }
 
    footer p {
      font-size: 0.75em;
-     margin: 0;
+     margin: 10px 0;
    }
 
 
@@ -304,8 +299,79 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* Tablet Styles */
+
+@media only screen and (min-width: 425px) {
+
+body {
+  grid-template: auto 90vh auto auto / 100vw;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  width: 55%;
+}
+
+.hero-area {
+  padding: 7%;
+}
+
+.hero-area p {
+  font-size: 1.15em;
+}
+
+#top {
+  width: 400px;
+}
+
+br {
+  display: none;
+}
+
+.sign-up input {
+  width: 50%;
+}
+
+.sign-up button {
+  width: 51%;
+}
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+body {
+  grid-template: auto auto 5% / 40% 60%;
+  grid-template-areas:  "head hero"
+                        "form hero"
+                        "foot hero";
+}
+
+.headline {
+  justify-content: flex-end;
+}
+
+#bottom {
+  width: 105%;
+}
+
+.sign-up {
+  margin: 30px 0 55px 0;
+}
+
+.sign-up input {
+  width: 65%;
+}
+
+.sign-up button {
+  width: 66%;
+}
+
 }
 
 @media print,
