@@ -322,6 +322,11 @@ textarea {
 
 body {
   grid-template: auto 90vh auto auto / 100vw;
+  grid-template-areas:
+        "head"
+        "hero"
+        "form"
+        "foot";
 }
 
 .headline {
