@@ -198,7 +198,7 @@ textarea {
      margin: 0;
    }
 
-  #successMessage p {
+  .sign-up #successMessage p {
     display: none;
 }
 
