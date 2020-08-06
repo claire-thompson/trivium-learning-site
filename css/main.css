@@ -198,6 +198,10 @@ textarea {
      margin: 0;
    }
 
+  #successMessage {
+    display: none;
+}
+
    /* Footer */
 
    footer {
